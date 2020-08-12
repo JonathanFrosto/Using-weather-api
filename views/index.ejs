@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jonathan Anthony">
+    <meta name="description" content="Não sabe o seu CEP? descubra agora">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="bg-info">
+        <div class="container">
+            <nav class="navbar navbar-dark">
+                <a class="navbar-brand" style="font-size: 40px;">What's the city?</a>
+                
+                <form action="" method="post" class="form-inline">
+                    <input id="cep" class="form-control mr-sm-2" name="cep" type="search" placeholder="CEP" aria-label="Search">
+                    <input class="btn btn-light my-2 my-sm-0" type="submit" value="Pesquisar">
+                </form>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <div class="container">
+            <table class="table">
+                <tbody>
+                  <tr>
+                    <th scope="row">Cidade</th>
+                    <td><%= city %></td>
+                  </tr>
+
+                  <tr>
+                    <th scope="row">Longitude - Latitude</th>
+                    <td><%= longitude %> / <%= latitude %> </td>
+                  </tr>
+
+                  <tr>
+                    <th scope="row">Temperatura</th>
+                    <td><%= temp %></td>
+                  </tr>
+
+                  <tr>
+                    <th scope="row">Previsão</th>
+                    <td> <img width="130px" src="<%= clouds %>" alt=""></td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </main>
+</body>
+</html>
